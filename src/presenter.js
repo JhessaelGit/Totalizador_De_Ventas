@@ -1,10 +1,14 @@
 import precio_neto from "./Precio_Neto";
 const cantidad_items = document.querySelector("#cantidad-item");
+const precio_items = document.querySelector("#precio-item");
 const formTotalizador=document.querySelector("#totalizador-form")
-const mostrardiv=document.querySelector("#mostrar-items-div")
+const mostrarcantidaddiv=document.querySelector("#mostrar-items-div")
+const mostrarpreciodiv=document.querySelector("#mostrar-precio-items-div")
 formTotalizador.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const items = Number.parseInt(cantidad_items.value);
-  mostrardiv.innerHTML = "<p>" + items + "</p>";
+  const cantidad_items_value = Number.parseInt(cantidad_items.value);
+  const precio_items_value = Number.parseInt(precio_items.value);
+  mostrarcantidaddiv.innerHTML = "<p>" + cantidad_items_value + "</p>";
+  mostrarpreciodiv.innerHTML = "<p>" + precio_items_value + "</p>";
 });

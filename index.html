@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html xml:lang="es">
   <head>
-    <title>Toralizador</title>
+    <title>Totalizador</title>
   </head>
   <body>
     <h1>Totalizador</h1>
     <form id="totalizador-form">
       <label for="cantidad-item">Cantidad de Item:</label>
       <input type="number" id="cantidad-item" />
-      <input type="submit" value="Totalizar" id="toralizador-button" />
+      <label for="precio-item">Precio por Item:</label>
+      <input type="number" id="precio-item" />
+      <input type="submit" value="Totalizar" id="totalizador-button" />
     </form>
     <div id="mostrar-items-div"></div>
+    <div id="mostrar-precio-items-div"></div>
 
     <script type="module" src="./src/presenter.js"></script>
   </body>
