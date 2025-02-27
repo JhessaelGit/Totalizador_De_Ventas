@@ -9,6 +9,6 @@ formTotalizador.addEventListener("submit", (event) => {
 
   const cantidad_items_value = Number.parseInt(cantidad_items.value);
   const precio_items_value = Number.parseInt(precio_items.value);
-  mostrarcantidaddiv.innerHTML = "<p>" + cantidad_items_value + "</p>";
-  mostrarpreciodiv.innerHTML = "<p>" + precio_items_value + "</p>";
+  mostrarcantidaddiv.innerHTML = "<p>" + "Cantidad de Items: " + cantidad_items_value + "</p>";
+  mostrarpreciodiv.innerHTML = "<p>" + "Precio por items: " + precio_items_value + "</p>";
 });
