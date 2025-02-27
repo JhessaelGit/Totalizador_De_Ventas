@@ -8,6 +8,7 @@
     "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "node ./script/tddScript.js",
+    "test-once": "jest Precio_Neto.test.js",
     "cypress": "cypress open",
     "cypress-run": "cypress run",
     "lint": "eslint .",

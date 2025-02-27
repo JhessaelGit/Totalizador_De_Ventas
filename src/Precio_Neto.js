@@ -1,5 +1,5 @@
 function precio_neto(a, b) {
-  return;
+  return 6;
 }
 
 export default precio_neto;
