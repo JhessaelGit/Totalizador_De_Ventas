@@ -1,0 +1,10 @@
+node_modules
+.cache
+dist
+.parcel-cache
+/coverage
+.DS_Store
+report.json
+./.husky/_
+tdd_log.json
+.husky/.commit-state
