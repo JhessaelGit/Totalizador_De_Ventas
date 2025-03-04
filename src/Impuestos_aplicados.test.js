@@ -13,4 +13,7 @@ describe("Aplicar Impuesto",() => {
     it("Deveria devolver un 108 al ingresar un precio de 100 e impuesto de 8", () => {
         expect(aplicar_impuesto(100,8)).toEqual(108)
     })
+    it("Deveria devolver un 216.5 al ingresar un precio de 200 e impuesto de 8.25", () => {
+        expect(aplicar_impuesto(200,8.25)).toEqual(216.5)
+    })
 })

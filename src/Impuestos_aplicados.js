@@ -10,7 +10,7 @@ function impuesto_correspondiente_al_estado(codigo_estado){
 }
 
 function aplicar_impuesto(precio, impuesto){
-    return precio + (precio * (impuesto/100))
+    return precio * (1 + impuesto/100);
 }
 
 export {impuesto_correspondiente_al_estado, aplicar_impuesto};
