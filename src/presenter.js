@@ -10,6 +10,10 @@ const mostrarDrecioDiv=document.querySelector("#mostrar-precio-items-div")
 const mostrarPrecioNetoDiv=document.querySelector("#mostrar-precio-neto-div")
 const mostrarCodigoEstadoDiv=document.querySelector("#mostrar-codigo-estado-div")
 const mostrarPrecioTotalDiv=document.querySelector("#mostrar-precio-total-div")
+const mostrarDesuentoDiv = document.querySelector("#mostrar-descuento-div")
+
+
+
 formTotalizador.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -24,4 +28,6 @@ formTotalizador.addEventListener("submit", (event) => {
   mostrarPrecioNetoDiv.innerHTML = "<p>" + "Precio Neto: $" + precio_neto(cantidad_items_value,precio_items_value) + "</p>";
   mostrarCodigoEstadoDiv.innerHTML = "<p>" + "Impuesto para " + codigo_estado_value + ` (${impuesto_correspondiente}%): ` + precio_total * (impuesto_correspondiente/100) + "</p>";
   mostrarPrecioTotalDiv.innerHTML = "<p>" + "Precio Total (+impuesto): " + aplicar_impuesto(precio_total,impuesto_correspondiente) + "</p>";
+
+
 });
