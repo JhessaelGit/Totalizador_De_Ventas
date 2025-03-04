@@ -17,5 +17,5 @@ formTotalizador.addEventListener("submit", (event) => {
   mostrarCantidadDiv.innerHTML = "<p>" + "Cantidad de Items: " + cantidad_items_value + "</p>";
   mostrarDrecioDiv.innerHTML = "<p>" + "Precio por items: $" + precio_items_value + "</p>";
   mostrarPrecioNetoDiv.innerHTML = "<p>" + "Precio Neto: $" + precio_neto(cantidad_items_value,precio_items_value) + "</p>";
-  mostrarCodigoEstadoDiv.innerHTML = "<p>" + "Codigo de Estado: " + codigo_estado_value + "</p>";
+  mostrarCodigoEstadoDiv.innerHTML = "<p>" + "Impuesto para " + codigo_estado_value + " " + "%" + "</p>";
 });
