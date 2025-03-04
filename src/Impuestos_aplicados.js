@@ -1,16 +1,25 @@
 function impuesto_correspondiente_al_estado(codigo_estado){
     let impuesto=0;
-    if(codigo_estado === "CA"){
-        impuesto = 8.25
-    }
-    else if (codigo_estado=== "AL"){
-        return impuesto = 4.00
-    }
-    else if(codigo_estado === "TX"){
-        impuesto = 6.25
-    }
-    else if(codigo_estado === "UT"){
-        impuesto = 6.65
+    switch(codigo_estado){
+        case "CA":{
+            impuesto = 8.25;
+            break;
+        }
+        case "AL":
+                {
+            impuesto = 4.00;
+            break;
+        }
+        case "TX":
+            {
+            impuesto = 6.25;
+            break;
+        }
+        case "UT":
+            {
+            impuesto = 6.65;
+            break;
+        }
     }
     return impuesto;
 }
