@@ -3,7 +3,10 @@ function impuesto_correspondiente_al_estado(codigo_estado){
     if(codigo_estado === "CA"){
         impuesto = 8.25
     }
-    else{
+    else if (codigo_estado=== "AL"){
+        return impuesto = 4.00
+    }
+    else if(codigo_estado === "UT"){
         impuesto = 6.65
     }
     return impuesto;
