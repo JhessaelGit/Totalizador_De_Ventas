@@ -9,4 +9,8 @@ function impuesto_correspondiente_al_estado(codigo_estado){
     return impuesto;
 }
 
-export default impuesto_correspondiente_al_estado;
+function aplicar_impuesto(precio, impuesto){
+    return precio + (precio * (impuesto/100))
+}
+
+export {impuesto_correspondiente_al_estado, aplicar_impuesto};
