@@ -11,7 +11,13 @@
       <label for="precio-item">Precio por Item:</label>
       <input type="number" id="precio-item" />
       <label for="codigo-estado">Codigo de estado</label>
-      <input type="text" id="codigo-estado">
+      <select id="codigo-estado">
+        <option value="UT">UT</option>
+        <option value="NV">NV</option>
+        <option value="TX">TX</option>
+        <option value="AL">AL</option>
+        <option value="CA">CA</option>
+      </select>
       <input type="submit" value="Totalizar" id="totalizador-button" />
     </form>
     <div id="mostrar-cantidad-items-div"></div>
