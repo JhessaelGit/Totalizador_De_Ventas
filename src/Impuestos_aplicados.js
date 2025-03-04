@@ -6,6 +6,9 @@ function impuesto_correspondiente_al_estado(codigo_estado){
     else if (codigo_estado=== "AL"){
         return impuesto = 4.00
     }
+    else if(codigo_estado === "TX"){
+        impuesto = 6.25
+    }
     else if(codigo_estado === "UT"){
         impuesto = 6.65
     }
