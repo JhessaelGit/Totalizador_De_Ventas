@@ -15,6 +15,11 @@ function impuesto_correspondiente_al_estado(codigo_estado){
             impuesto = 6.25;
             break;
         }
+        case "NV":
+        {
+            impuesto = 8.00;
+            break;
+        }
         case "UT":
             {
             impuesto = 6.65;

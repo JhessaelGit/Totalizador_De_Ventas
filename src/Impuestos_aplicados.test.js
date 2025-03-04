@@ -10,6 +10,9 @@ describe("Determinar los porsentajes aplicados de los impuestos",() => {
     it("al ingresar el AL debe devolver un 4.00", () => {
         expect(impuesto_correspondiente_al_estado("AL")).toEqual(4.00)
     })
+    it("al ingresar el NV debe devolver un 8.00", () => {
+        expect(impuesto_correspondiente_al_estado("NV")).toEqual(8.00)
+    })
     it("al ingresar el TX debe devolver un 4.00", () => {
         expect(impuesto_correspondiente_al_estado("TX")).toEqual(6.25)
     })
