@@ -6,5 +6,8 @@ describe("Test para la funcion de optener el descuento", () => {
     it("Al ingresar un 1000 deve devolver un 3", () => {
         expect(descuento_correspondiente(1000)).toEqual(3)
     })
+    it("Al ingresar un 1000 deve devolver un 3", () => {
+        expect(descuento_correspondiente(3000)).toEqual(5)
+    })
     
 })

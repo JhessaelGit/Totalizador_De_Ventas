@@ -1,8 +1,14 @@
 function descuento_correspondiente(cantidad)
 {
+    let descuento_porcentaje=0
+    
     if (cantidad === 1000){
-        return 3
+        descuento_porcentaje = 3
     }
-    return 0
+    else if( cantidad === 3000)
+    {
+        descuento_porcentaje = 5
+    }
+    return descuento_porcentaje;
 }
 export {descuento_correspondiente}
