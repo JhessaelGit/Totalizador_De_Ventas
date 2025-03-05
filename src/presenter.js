@@ -23,14 +23,13 @@ formTotalizador.addEventListener("submit", (event) => {
   const impuesto_correspondiente= impuesto_correspondiente_al_estado(codigo_estado_value);
   const precio_neto=calcular_precio_neto(cantidad_items_value,precio_items_value);
   const descuento_porcentaje = descuento_correspondiente(cantidad_items_value)
-  
+  const precio_total= aplicar_descuento(aplicar_impuesto(precio_neto,impuesto_correspondiente),descuento_porcentaje)
 
   mostrarCantidadDiv.innerHTML = "<p>" + "Cantidad de Items: " + cantidad_items_value + "</p>";
   mostrarPrecioDiv.innerHTML = "<p>" + "Precio por items: $" + precio_items_value + "</p>";
   mostrarPrecioNetoDiv.innerHTML = "<p>" + "Precio Neto: $" + precio_neto + "</p>";
   mostrarDesuentoDiv.innerHTML = "<p>" + `Descuento (${descuento_porcentaje})%): ` + Math.round(precio_neto*(descuento_porcentaje/100)) +"</p>"
   mostrarCodigoEstadoDiv.innerHTML = "<p>" + "Impuesto para " + codigo_estado_value + ` (${impuesto_correspondiente}%): ` + aplicar_impuesto(precio_neto,impuesto_correspondiente) + "</p>";
-
-  mostrarPrecioTotalDiv.innerHTML = "<p>" + "Precio Total (+impuesto): " + aplicar_impuesto(precio_neto,impuesto_correspondiente) + "</p>";
+  mostrarPrecioTotalDiv.innerHTML = "<p>" + "Precio Total (impuesto y descuento): " + precio_total + "</p>";
 
 });
