@@ -30,4 +30,7 @@ describe("Test para la funcion aplicar descuento", () => {
     it("Al ingresar el precio de 100 y el porcentaje 10 deve devolver un 90", () => {
         expect(aplicar_descuento(100,10)).toEqual(90)
     })
+    it("Al ingresar el precio de 200 y el porcentaje 33 deve devolver un 90", () => {
+        expect(aplicar_descuento(200,33)).toEqual(134)
+    })
 })
