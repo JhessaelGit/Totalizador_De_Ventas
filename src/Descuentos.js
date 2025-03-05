@@ -9,6 +9,10 @@ function descuento_correspondiente(cantidad)
     {
         descuento_porcentaje = 5
     }
+    else if (cantidad >= 7000 && cantidad < 10000)
+    {
+        descuento_porcentaje = 7
+    }
     return descuento_porcentaje;
 }
 export {descuento_correspondiente}
