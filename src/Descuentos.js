@@ -23,4 +23,10 @@ function descuento_correspondiente(cantidad)
     }
     return descuento_porcentaje;
 }
-export {descuento_correspondiente}
+
+function aplicar_descuento(precio_total, descuento_porcentaje)
+{
+    let porcentaje_en_decimales = 1 - (descuento_porcentaje / 100)
+    return precio_total*porcentaje_en_decimales
+}
+export {descuento_correspondiente, aplicar_descuento}
