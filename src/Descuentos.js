@@ -5,7 +5,7 @@ function descuento_correspondiente(cantidad)
     if (cantidad >= 1000 && cantidad < 3000){
         descuento_porcentaje = 3
     }
-    else if( cantidad === 3000)
+    else if( cantidad >= 3000 && cantidad < 7000)
     {
         descuento_porcentaje = 5
     }
