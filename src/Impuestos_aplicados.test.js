@@ -34,5 +34,8 @@ describe("Aplicar impuesto por categoria de producto",() => {
     it("Al seleccionar la categoria Bebidas alcoholicas deberia mostrar un impuesto de 7%", () => {
         expect(impuesto_correspondiente_a_la_categoria("Bebidas alcoholicas")).toEqual(7)
     })
+    it("Al seleccionar la categoria Material escritorio deberia mostrar un impuesto de 0%", () => {
+        expect(impuesto_correspondiente_a_la_categoria("Material escritorio")).toEqual(0)
+    })
    
 })
