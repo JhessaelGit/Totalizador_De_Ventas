@@ -47,9 +47,13 @@ function impuesto_correspondiente_a_la_categoria(categoria)
         impuesto=3;
     }
     else if (categoria === "Vestimenta")
-        {
+    {
             impuesto=2;
-        }
+    }
+    else if (categoria === "Electronicos")
+    {
+                impuesto=4;
+    }
     return impuesto
 }
 export {impuesto_correspondiente_al_estado, aplicar_impuesto, impuesto_correspondiente_a_la_categoria};
