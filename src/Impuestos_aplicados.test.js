@@ -40,5 +40,9 @@ describe("Aplicar impuesto por categoria de producto",() => {
     it("Al seleccionar la categoria Muebles deberia mostrar un impuesto de 3%", () => {
         expect(impuesto_correspondiente_a_la_categoria("Muebles")).toEqual(3)
     })
+
+    it("Al seleccionar la categoria Vestimenta deberia mostrar un impuesto de 2%", () => {
+        expect(impuesto_correspondiente_a_la_categoria("Vestimenta")).toEqual(2)
+    })
    
 })
