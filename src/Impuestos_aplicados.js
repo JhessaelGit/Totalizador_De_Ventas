@@ -35,6 +35,8 @@ function aplicar_impuesto(precio, impuesto){
 
 function impuesto_correspondiente_a_la_categoria(categoria)
 {
+    if (categoria=== "Bebidas alcoholicas")
+        return 7;
     return 0;
 }
 export {impuesto_correspondiente_al_estado, aplicar_impuesto, impuesto_correspondiente_a_la_categoria};
