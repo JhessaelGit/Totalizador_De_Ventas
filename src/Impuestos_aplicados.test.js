@@ -48,5 +48,9 @@ describe("Aplicar impuesto por categoria de producto",() => {
     it("Al seleccionar la categoria electronicos deberia mostrar un impuesto de 4%", () => {
         expect(impuesto_correspondiente_a_la_categoria("Electronicos")).toEqual(4)
     })
+
+    it("Al seleccionar la categoria varios deberia mostrar un impuesto de 0%", () => {
+        expect(impuesto_correspondiente_a_la_categoria("Varios")).toEqual(0)
+    })
    
 })

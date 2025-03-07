@@ -36,7 +36,7 @@ function aplicar_impuesto(precio, impuesto){
 function impuesto_correspondiente_a_la_categoria(categoria)
 {
     let impuesto=0
-    if (categoria === "Alimentos" && categoria === "Material escritorio")
+    if (categoria === "Alimentos" && categoria === "Material escritorio" && categoria === "Varios")
         impuesto= 0;
     else if (categoria=== "Bebidas alcoholicas"){
         
@@ -48,11 +48,11 @@ function impuesto_correspondiente_a_la_categoria(categoria)
     }
     else if (categoria === "Vestimenta")
     {
-            impuesto=2;
+        impuesto=2;
     }
     else if (categoria === "Electronicos")
     {
-                impuesto=4;
+        impuesto=4;
     }
     return impuesto
 }
