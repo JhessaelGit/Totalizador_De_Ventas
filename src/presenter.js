@@ -29,7 +29,7 @@ formTotalizador.addEventListener("submit", (event) => {
   mostrarPrecioDiv.innerHTML = "<p>" + "Precio por items: $" + precio_items_value + "</p>";
   mostrarPrecioNetoDiv.innerHTML = "<p>" + "Precio Neto: $" + precio_neto + "</p>";
   mostrarDesuentoDiv.innerHTML = "<p>" + `Descuento (${descuento_porcentaje})%): ` + Math.round(precio_neto*(descuento_porcentaje/100)) +"</p>"
-  mostrarCodigoEstadoDiv.innerHTML = "<p>" + "Impuesto para " + codigo_estado_value + ` (${impuesto_correspondiente}%): ` + aplicar_impuesto(precio_neto,impuesto_correspondiente) + "</p>";
+  mostrarCodigoEstadoDiv.innerHTML = "<p>" + "Impuesto para " + codigo_estado_value + ` (${impuesto_correspondiente}%): ` + ((precio_neto-aplicar_impuesto(precio_neto,impuesto_correspondiente))*-1) + "</p>";
   mostrarPrecioTotalDiv.innerHTML = "<p>" + "Precio Total (impuesto y descuento): " + precio_total + "</p>";
 
 });
