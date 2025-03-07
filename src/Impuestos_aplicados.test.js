@@ -1,6 +1,6 @@
-import {impuesto_correspondiente_al_estado,aplicar_impuesto} from "./Impuestos_aplicados"
+import {impuesto_correspondiente_al_estado,aplicar_impuesto,impuesto_correspondiente_a_la_categoria} from "./Impuestos_aplicados"
 
-describe("Determinar los porsentajes aplicados de los impuestos",() => {
+describe("Determinar los porsentajes aplicados de los impuestos por estado",() => {
     it("Al ingresar el CA debe devolver un 8.25", () => {
         expect(impuesto_correspondiente_al_estado("CA")).toEqual(8.25)
     })
@@ -25,4 +25,11 @@ describe("Aplicar Impuesto",() => {
     it("Deveria devolver un 216.5 al ingresar un precio de 200 e impuesto de 8.25", () => {
         expect(aplicar_impuesto(200,8.25)).toEqual(216.5)
     })
+})
+
+describe("Aplicar impuesto por categoria de producto",() => {
+    it("Al seleccionar la categoria alimento deberia mostrar un impuesto de 0%", () => {
+        expect(impuesto_correspondiente_a_la_categoria("Alimentos")).toEqual(0)
+    })
+   
 })
