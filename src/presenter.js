@@ -31,14 +31,15 @@ formTotalizador.addEventListener("submit", (event) => {
   const porcentaje_impuesto_categoria = impuesto_correspondiente_a_la_categoria(categoria_producto_value)
   const porcentaje_descuento_categoria = descuento_correspondiente_categoria(categoria_producto_value)
   const impuesto_categoria_agregado = ((porcentaje_impuesto_categoria)/100)*precio_neto
-
+  const impuesto_codigo_estado_aplicado_al_total = (((precio_neto-aplicar_impuesto(precio_neto,impuesto_correspondiente_estado))*-1).toFixed(2))
 
 
   mostrarCantidadDiv.innerHTML = "<p>" + "Cantidad de Items: " + cantidad_items_value + "</p>";
   mostrarPrecioDiv.innerHTML = "<p>" + "Precio por items: $" + precio_items_value + "</p>";
   mostrarPrecioNetoDiv.innerHTML = "<p>" + "Precio Neto: $" + precio_neto + "</p>";
   mostrarDesuentoDiv.innerHTML = "<p>" + `Descuento (${descuento_porcentaje})%): -` + Math.round(precio_neto*(descuento_porcentaje/100)) +"</p>"
-  mostrarCodigoEstadoDiv.innerHTML = "<p>" + "Impuesto para " + codigo_estado_value + ` (${impuesto_correspondiente_estado}%): ` + (((precio_neto-aplicar_impuesto(precio_neto,impuesto_correspondiente_estado))*-1).toFixed(2)) + "</p>";
+
+  mostrarCodigoEstadoDiv.innerHTML = "<p>" + "Impuesto para " + codigo_estado_value + ` (${impuesto_correspondiente_estado}%): ` + impuesto_codigo_estado_aplicado_al_total + "</p>";
   mostrarImpuestoCategoriaDiv.innerHTML = "<p>" + `Impuesto adicional para la categoria ${categoria_producto_value} (${porcentaje_impuesto_categoria}%): ` + impuesto_categoria_agregado +"</p>"
   mostrarDescuentoCategoriaDiv.innerHTML = "<p>" + `Descuento adicional para la categoria ${categoria_producto_value} (${porcentaje_descuento_categoria}%): ` + "</p>"
   mostrarPrecioTotalDiv.innerHTML = "<p>" + "Precio Total (impuesto y descuento): " + precio_total + "</p>";
