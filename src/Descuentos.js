@@ -34,13 +34,17 @@ function aplicar_descuento(precio_total, descuento_porcentaje)
 function descuento_correspondiente_categoria(categoria)
 {
     let impuesto_porcentaje_categotia=0
-    if (categoria === "Bebidas alcoholicas" || categoria === "Muebles" || categoria === "Vestimenta" || categoria === "Varios")
+    const tiene_descuento_de_0=categoria === "Bebidas alcoholicas" || categoria === "Muebles" || categoria === "Vestimenta" || categoria === "Varios"
+    const tiene_descuento_de_2 = categoria === "Alimentos"
+    const tiene_descuento_de_1_punto_5 =categoria === "Material escritorio"
+    const tiene_descuento_de_1 = categoria === "Electronicos"
+    if (tiene_descuento_de_0)
         impuesto_porcentaje_categotia = 0
-    else if (categoria === "Alimentos")
+    else if (tiene_descuento_de_2)
         impuesto_porcentaje_categotia = 2
-    else if (categoria === "Material escritorio")
+    else if (tiene_descuento_de_1_punto_5)
         impuesto_porcentaje_categotia = 1.5
-    else if (categoria === "Electronicos")
+    else if (tiene_descuento_de_1)
         impuesto_porcentaje_categotia = 1
     
     return impuesto_porcentaje_categotia
