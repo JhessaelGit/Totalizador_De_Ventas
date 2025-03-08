@@ -33,10 +33,14 @@ function aplicar_descuento(precio_total, descuento_porcentaje)
 }
 function descuento_correspondiente_categoria(categoria)
 {
+    let impuesto_porcentaje_categotia=0
     if (categoria === "Bebidas alcoholicas")
-        return 0
+        impuesto_porcentaje_categotia = 0
     else if (categoria === "Alimentos")
-        return 2
+        impuesto_porcentaje_categotia = 2
+    else if (categoria === "Material escritorio")
+        impuesto_porcentaje_categotia = 1.5
+    return impuesto_porcentaje_categotia
 }
 
 export {descuento_correspondiente_cantidad, aplicar_descuento, descuento_correspondiente_categoria}
