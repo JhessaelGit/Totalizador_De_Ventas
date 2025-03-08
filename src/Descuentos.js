@@ -33,7 +33,10 @@ function aplicar_descuento(precio_total, descuento_porcentaje)
 }
 function descuento_correspondiente_categoria(categoria)
 {
-    return 2
+    if (categoria === "Bebidas alcoholicas")
+        return 0
+    else if (categoria === "Alimentos")
+        return 2
 }
 
 export {descuento_correspondiente_cantidad, aplicar_descuento, descuento_correspondiente_categoria}
