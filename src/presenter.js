@@ -7,6 +7,7 @@ const precio_items = document.querySelector("#precio-item");
 const formTotalizador=document.querySelector("#totalizador-form")
 const codigo_estado = document.querySelector("#codigo-estado");
 const categoria_producto = document.querySelector("#categoria-producto")
+const peso_volumetrico =document.querySelector("#peso-volumetrico")
 
 const mostrarCantidadDiv = document.querySelector("#mostrar-cantidad-items-div")
 const mostrarPrecioDiv = document.querySelector("#mostrar-precio-items-div")
@@ -16,6 +17,7 @@ const mostrarPrecioTotalDiv = document.querySelector("#mostrar-precio-total-div"
 const mostrarDesuentoDiv = document.querySelector("#mostrar-descuento-div")
 const mostrarImpuestoCategoriaDiv = document.querySelector('#mostrar-impuesto-categoria-div')
 const mostrarDescuentoCategoriaDiv = document.querySelector('#mostrar-descuento-categoria-div')
+const mostrarPesoVolumetricoDiv =document.querySelector("#mostrar-peso-volumetrico-y-costo-envio-div")
 
 formTotalizador.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -24,7 +26,7 @@ formTotalizador.addEventListener("submit", (event) => {
   const precio_items_value = Number.parseInt(precio_items.value);
   const codigo_estado_value = codigo_estado.value;
   const categoria_producto_value = categoria_producto.value;
-  
+  const peso_volumetrico_value = peso_volumetrico.value;
   
   const descuento_porcentaje = descuento_correspondiente_cantidad(cantidad_items_value)
   const porcentaje_impuesto_categoria = impuesto_correspondiente_a_la_categoria(categoria_producto_value)
@@ -38,6 +40,7 @@ formTotalizador.addEventListener("submit", (event) => {
   const impuesto_codigo_estado_aplicado_al_total = (((precio_neto-aplicar_impuesto(precio_neto,impuesto_correspondiente_estado))*-1).toFixed(2))
   const impuesto_categoria_agregado_al_total = (((porcentaje_impuesto_categoria)/100)*precio_neto).toFixed(2)
   const descuento_categoria_agregado_al_total = ((descuento_correspondiente_categoria(categoria_producto_value)/100)*precio_neto).toFixed(2)
+  const descuento_por_peso_volumetrico = 0
 
   mostrarCantidadDiv.innerHTML = "<p>" + "Cantidad de Items: " + cantidad_items_value + "</p>";
   mostrarPrecioDiv.innerHTML = "<p>" + "Precio por items: $" + precio_items_value + "</p>";
@@ -47,6 +50,7 @@ formTotalizador.addEventListener("submit", (event) => {
   mostrarCodigoEstadoDiv.innerHTML = "<p>" + "Impuesto para " + codigo_estado_value + ` (${impuesto_correspondiente_estado}%): ` + impuesto_codigo_estado_aplicado_al_total + "</p>";
   mostrarImpuestoCategoriaDiv.innerHTML = "<p>" + `Impuesto adicional para la categoria ${categoria_producto_value} (${porcentaje_impuesto_categoria}%): ` + impuesto_categoria_agregado_al_total +"</p>"
   mostrarDescuentoCategoriaDiv.innerHTML = "<p>" + `Descuento adicional para la categoria ${categoria_producto_value} (${porcentaje_descuento_categoria}%): ` + descuento_categoria_agregado_al_total + "</p>"
+  mostrarPesoVolumetricoDiv.innerHTML = "<p>" + `Costo de envio para el peso ${peso_volumetrico_value} : ` + descuento_por_peso_volumetrico + "</p>"
   mostrarPrecioTotalDiv.innerHTML = "<p>" + "Precio Total (impuesto y descuento): " + precio_total + "</p>";
 
 });
