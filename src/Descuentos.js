@@ -31,6 +31,9 @@ function aplicar_descuento(precio_total, descuento_porcentaje)
 
     return Math.round(precio_con_descuento)
 }
+function descuento_correspondiente_categoria(categoria)
+{
+    return 2
+}
 
-
-export {descuento_correspondiente_cantidad, aplicar_descuento}
+export {descuento_correspondiente_cantidad, aplicar_descuento, descuento_correspondiente_categoria}

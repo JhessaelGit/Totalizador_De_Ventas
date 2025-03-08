@@ -1,5 +1,5 @@
-import { descuento_correspondiente_cantidad, aplicar_descuento } from "./Descuentos"
-describe("Test para la funcion de optener el descuento", () => {
+import { descuento_correspondiente_cantidad, aplicar_descuento, descuento_correspondiente_categoria } from "./Descuentos"
+describe("Test para la funcion de optener el descuento segun la cantidad", () => {
     it("Al ingresar un 500 deve devolver un 0", () => {
         expect(descuento_correspondiente_cantidad(500)).toEqual(0)
     })
@@ -33,4 +33,11 @@ describe("Test para la funcion aplicar descuento", () => {
     it("Al ingresar el precio de 200 y el porcentaje 33 deve devolver un 90", () => {
         expect(aplicar_descuento(200,33)).toEqual(134)
     })
+})
+
+describe("Test para la funcion obtener el descuento de categoria", () => {
+    it("Al ingresar el Alimentos debe devolver un 2", () => {
+        expect(descuento_correspondiente_categoria("Alimentos")).toEqual(2)
+    })
+    
 })
