@@ -38,6 +38,7 @@ function descuento_correspondiente_categoria(categoria)
     const tiene_descuento_de_2 = categoria === "Alimentos"
     const tiene_descuento_de_1_punto_5 =categoria === "Material escritorio"
     const tiene_descuento_de_1 = categoria === "Electronicos"
+    
     if (tiene_descuento_de_0)
         impuesto_porcentaje_categotia = 0
     else if (tiene_descuento_de_2)
