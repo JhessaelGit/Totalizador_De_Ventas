@@ -1,4 +1,4 @@
-function descuento_correspondiente(cantidad)
+function descuento_correspondiente_cantidad(cantidad)
 {
     let descuento_porcentaje=0
     
@@ -31,4 +31,6 @@ function aplicar_descuento(precio_total, descuento_porcentaje)
 
     return Math.round(precio_con_descuento)
 }
-export {descuento_correspondiente, aplicar_descuento}
+
+
+export {descuento_correspondiente_cantidad, aplicar_descuento}

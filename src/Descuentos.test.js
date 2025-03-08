@@ -1,28 +1,28 @@
-import { descuento_correspondiente, aplicar_descuento } from "./Descuentos"
+import { descuento_correspondiente_cantidad, aplicar_descuento } from "./Descuentos"
 describe("Test para la funcion de optener el descuento", () => {
     it("Al ingresar un 500 deve devolver un 0", () => {
-        expect(descuento_correspondiente(500)).toEqual(0)
+        expect(descuento_correspondiente_cantidad(500)).toEqual(0)
     })
     it("Al ingresar un 1000 deve devolver un 3", () => {
-        expect(descuento_correspondiente(1000)).toEqual(3)
+        expect(descuento_correspondiente_cantidad(1000)).toEqual(3)
     })
     it("Al ingresar un 1000 deve devolver un 3", () => {
-        expect(descuento_correspondiente(3000)).toEqual(5)
+        expect(descuento_correspondiente_cantidad(3000)).toEqual(5)
     })
     it("Al ingresar un 1300 deve devolver un 3", () => {
-        expect(descuento_correspondiente(1300)).toEqual(3)
+        expect(descuento_correspondiente_cantidad(1300)).toEqual(3)
     })
     it("Al ingresar un 3300 deve devolver un 5", () => {
-        expect(descuento_correspondiente(3300)).toEqual(5)
+        expect(descuento_correspondiente_cantidad(3300)).toEqual(5)
     })
     it("Al ingresar un 7500 deve devolver un 5", () => {
-        expect(descuento_correspondiente(7500)).toEqual(7)
+        expect(descuento_correspondiente_cantidad(7500)).toEqual(7)
     })
     it("Al ingresar un 15300 deve devolver un 10", () => {
-        expect(descuento_correspondiente(15300)).toEqual(10)
+        expect(descuento_correspondiente_cantidad(15300)).toEqual(10)
     })
     it("Al ingresar un 45350 deve devolver un 15", () => {
-        expect(descuento_correspondiente(45350)).toEqual(15)
+        expect(descuento_correspondiente_cantidad(45350)).toEqual(15)
     })
 })
 
