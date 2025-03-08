@@ -40,6 +40,9 @@ function descuento_correspondiente_categoria(categoria)
         impuesto_porcentaje_categotia = 2
     else if (categoria === "Material escritorio")
         impuesto_porcentaje_categotia = 1.5
+    else if (categoria === "Electronicos")
+        impuesto_porcentaje_categotia = 1
+    
     return impuesto_porcentaje_categotia
 }
 

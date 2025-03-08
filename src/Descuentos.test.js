@@ -48,6 +48,10 @@ describe("Test para la funcion obtener el descuento de categoria", () => {
     it("Al ingresar Muebles deveria devolver un 0", () => {
         expect(descuento_correspondiente_categoria("Muebles")).toEqual(0)
     })
+    it("Al ingresar Electronicos deveria devolver un 1", () => {
+        expect(descuento_correspondiente_categoria("Electronicos")).toEqual(1)
+    })
+    
     
     
 })
