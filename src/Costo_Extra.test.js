@@ -42,4 +42,11 @@ describe("Pruebas para la Funcion para obtener el costo de envio", () => {
         expect(obtener_costo_envio_por_peso_volumetrico(178)).toEqual(8);
         expect(obtener_costo_envio_por_peso_volumetrico(200)).toEqual(8);  
     })
+
+    it("Al mandarle un numero mayor a 200 debe devolver un 9", () => {
+        expect(obtener_costo_envio_por_peso_volumetrico(201)).toEqual(9);
+        expect(obtener_costo_envio_por_peso_volumetrico(250)).toEqual(9);
+        expect(obtener_costo_envio_por_peso_volumetrico(400)).toEqual(9);
+        expect(obtener_costo_envio_por_peso_volumetrico(1000)).toEqual(9);  
+    })
 })
