@@ -68,9 +68,13 @@ formTotalizador.addEventListener("submit", (event) => {
   mostrarTipoDeClienteDiv.innerHTML = "<p>" + `Beneficio de descuento para el costo de envio para el tipo de cliente ${tipo_de_cliente_value} (${porcentaje_descuento_en_costo_envio_por_tipo_de_cliente}%): ${descuento_al_costo_de_envio}` + "</p>";
 
   costo_extra_envio_al_total = (costo_extra_envio_al_total-descuento_al_costo_de_envio).toFixed(2);
+  
 
   precio_total=precio_total+Number(impuesto_categoria_agregado_al_total) - Number(descuento_categoria_agregado_al_total) + Number(costo_extra_envio_al_total);
   precio_total = precio_total - obtener_bneficio_con_condiciones_especiales(tipo_de_cliente_value,precio_neto,categoria_producto_value)
-  mostrarPrecioTotalDiv.innerHTML = "<p>" + "Precio Total (impuesto y descuento): " + precio_total + "</p>";
-
+  if(obtener_bneficio_con_condiciones_especiales(tipo_de_cliente_value,precio_neto,categoria_producto_value) != 0)
+    mostrarPrecioTotalDiv.innerHTML = "<p>" + `Se cumplio la condicion especial se aplicara un descuento de ${obtener_bneficio_con_condiciones_especiales(tipo_de_cliente_value,precio_neto,categoria_producto_value)}` + "</p>" + "<p>" + "Precio Total (impuesto y descuento): " + precio_total + "</p>";
+  else{
+    mostrarPrecioTotalDiv.innerHTML = "<p>" + "Precio Total (impuesto y descuento): " + precio_total + "</p>";
+  }
 });

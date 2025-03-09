@@ -29,5 +29,6 @@ function obtener_bneficio_con_condiciones_especiales(tipo_de_cliente, precio_net
         return 100
     else if (merese_descuento_de_200)
         return 200
+    return 0
 }
 export {obtener_beneficio_segun_tipo_de_cliente, obtener_bneficio_con_condiciones_especiales}
