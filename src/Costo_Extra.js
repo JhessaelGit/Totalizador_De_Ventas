@@ -7,6 +7,8 @@ function obtener_costo_envio_por_peso_volumetrico(peso_volumetrico)
         costo_envio=5;
     else if( peso_volumetrico > 40 && peso_volumetrico <=80)
         costo_envio=6;
+    else if( peso_volumetrico > 80 && peso_volumetrico <=100)
+        costo_envio=6.5;
     return costo_envio;
 
 }
