@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e3f2fd; 
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    color: #01579b; 
+  }
+  
+  form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-left: 6px solid #0288d1; 
+  }
+  
+  label {
+    font-weight: bold;
+    color: #0277bd; 
+    margin-top: 5px;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #81d4fa; 
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #e1f5fe; 
+  }
+  
+  input:focus, select:focus {
+    border-color: #0288d1; 
+    outline: none;
+    box-shadow: 0 0 5px rgba(2, 136, 209, 0.5);
+  }
+  
+  input[type="submit"] {
+    background-color: #0288d1; 
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    border-radius: 5px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0277bd; 
+    transform: scale(1.05);
+  }
+
+  #mostrar-cantidad-items-div,
+  #mostrar-precio-items-div,
+  #mostrar-precio-neto-div,
+  #mostrar-descuento-div,
+  #mostrar-codigo-estado-div,
+  #mostrar-impuesto-categoria-div,
+  #mostrar-descuento-categoria-div,
+  #mostrar-peso-volumetrico-y-costo-envio-div,
+  #mostrar-tipo-de-cliente-div,
+  #mostrar-precio-total-div {
+    background: #ffffff;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 340px;
+    border-left: 5px solid #0288d1; 
+  }
+  
