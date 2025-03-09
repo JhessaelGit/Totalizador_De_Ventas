@@ -1,0 +1,8 @@
+import { obtener_beneficio_segun_tipo_de_cliente } from "./Tipo_de_cliente_beneficios";
+
+describe("prueba de la funcion de obtener beneficio segun el tipo de cliente", () => {
+    it ("si la funcion obtiene el valor Normal debe devolver el dato de 0", () => {
+        expect(obtener_beneficio_segun_tipo_de_cliente("Normal")).toEqual(0)
+    })
+})
+

@@ -2,6 +2,8 @@ import calcular_precio_neto from "./Precio_Neto";
 import {impuesto_correspondiente_al_estado,aplicar_impuesto,impuesto_correspondiente_a_la_categoria} from "./Impuestos_aplicados";
 import { descuento_correspondiente_cantidad, aplicar_descuento, descuento_correspondiente_categoria } from "./Descuentos";
 import { obtener_costo_envio_por_peso_volumetrico } from "./Costo_Extra";
+import { obtener_beneficio_segun_tipo_de_cliente } from "./Tipo_de_cliente_beneficios";
+
 
 const cantidad_items = document.querySelector("#cantidad-item");
 const precio_items = document.querySelector("#precio-item");
@@ -45,7 +47,7 @@ formTotalizador.addEventListener("submit", (event) => {
   const impuesto_categoria_agregado_al_total = (((porcentaje_impuesto_categoria)/100)*precio_neto).toFixed(2)
   const descuento_categoria_agregado_al_total = ((descuento_correspondiente_categoria(categoria_producto_value)/100)*precio_neto).toFixed(2)
   const costo_envio_por_peso_volumetrico = obtener_costo_envio_por_peso_volumetrico(peso_volumetrico_value)
-  const porcentaje_descuento_en_costo_envio_por_tipo_de_cliente = 0;
+  const porcentaje_descuento_en_costo_envio_por_tipo_de_cliente = obtener_beneficio_segun_tipo_de_cliente(tipo_de_cliente_value);
 
   mostrarCantidadDiv.innerHTML = "<p>" + "Cantidad de Items: " + cantidad_items_value + "</p>";
   mostrarPrecioDiv.innerHTML = "<p>" + "Precio por items: $" + precio_items_value + "</p>";
