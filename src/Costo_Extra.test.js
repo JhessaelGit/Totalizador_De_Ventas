@@ -9,5 +9,11 @@ describe("Pruebas para la Funcion para obtener el costo de envio", () => {
         expect(obtener_costo_envio_por_peso_volumetrico(7)).toEqual(0);
         expect(obtener_costo_envio_por_peso_volumetrico(10)).toEqual(0);  
     })
+    it("Al mandarle un numero entre 11 y 20 debe devolver un 3.5", () => {
+        expect(obtener_costo_envio_por_peso_volumetrico(11)).toEqual(3.5);
+        expect(obtener_costo_envio_por_peso_volumetrico(15)).toEqual(3.5);
+        expect(obtener_costo_envio_por_peso_volumetrico(18)).toEqual(3.5);
+        expect(obtener_costo_envio_por_peso_volumetrico(20)).toEqual(3.5);  
+    })
     
 })
