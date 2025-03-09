@@ -7,9 +7,9 @@
     <h1>Totalizador</h1>
     <form id="totalizador-form">
       <label for="cantidad-item">Cantidad de Item:</label>
-      <input type="number" id="cantidad-item" />
+      <input type="number" id="cantidad-item" min="0"/>
       <label for="precio-item">Precio por Item:</label>
-      <input type="number" id="precio-item" />
+      <input type="number" id="precio-item" min="0"/>
       <label for="codigo-estado">Codigo de estado</label>
       <select id="codigo-estado">
         <option value="CA">CA</option>
@@ -29,7 +29,7 @@
         <option value="Varios">Varios</option>
       </select>
       <label for="peso-volumetrico">Peso volumetrico</label>
-      <input type="number" id="peso-volumetrico">
+      <input type="number" id="peso-volumetrico" min="0">
       <label for="tipo-de-cliente">Tipo de cliente</label>
       <select id="tipo-de-cliente">
         <option value="Normal">Normal</option>
