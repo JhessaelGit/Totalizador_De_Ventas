@@ -23,6 +23,11 @@ function obtener_beneficio_segun_tipo_de_cliente (tipo_de_cliente)
 
 function obtener_bneficio_con_condiciones_especiales(tipo_de_cliente, precio_neto, categoria_producto)
 {
-    return 100
+    let merese_descuento_de_100 = tipo_de_cliente === "Recurrente" && precio_neto > 3000 && categoria_producto === "Alimentos"
+    let merese_descuento_de_200 = tipo_de_cliente === "Especial" && precio_neto > 7000 && categoria_producto === "Electronicos"
+    if(merese_descuento_de_100)
+        return 100
+    else if (merese_descuento_de_200)
+        return 200
 }
 export {obtener_beneficio_segun_tipo_de_cliente, obtener_bneficio_con_condiciones_especiales}

@@ -22,6 +22,10 @@ describe("prueba de la funcion de beneficio con condiciones especiales", () => {
     it ("si la funcion recive Recurrente, 3100, Alimentos deberia retornar 100", () => {
         expect(obtener_bneficio_con_condiciones_especiales("Recurrente", 3100, "Alimentos")).toEqual(100)
     })
+    it ("si la funcion recive Especial, 7200, Electronicos deberia retornar 200", () => {
+        expect(obtener_bneficio_con_condiciones_especiales("Especial", 7200, "Electronicos")).toEqual(200)
+    })
+    
 })
 
 
