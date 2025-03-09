@@ -19,4 +19,10 @@ function obtener_beneficio_segun_tipo_de_cliente (tipo_de_cliente)
     }
     return beneficio_descuento
 }
-export {obtener_beneficio_segun_tipo_de_cliente}
+
+
+function obtener_bneficio_con_condiciones_especiales(tipo_de_cliente, precio_neto, categoria_producto)
+{
+    return 100
+}
+export {obtener_beneficio_segun_tipo_de_cliente, obtener_bneficio_con_condiciones_especiales}

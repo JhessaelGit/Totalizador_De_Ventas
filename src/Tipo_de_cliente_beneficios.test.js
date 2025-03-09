@@ -1,4 +1,4 @@
-import { obtener_beneficio_segun_tipo_de_cliente } from "./Tipo_de_cliente_beneficios";
+import { obtener_beneficio_segun_tipo_de_cliente, obtener_bneficio_con_condiciones_especiales } from "./Tipo_de_cliente_beneficios";
 
 describe("prueba de la funcion de obtener beneficio segun el tipo de cliente", () => {
     it ("si la funcion obtiene el valor Normal debe devolver el dato de 0", () => {
@@ -15,6 +15,12 @@ describe("prueba de la funcion de obtener beneficio segun el tipo de cliente", (
 
     it ("si la funcion obtiene el valor especial debe devolver el dato de 1.5", () => {
         expect(obtener_beneficio_segun_tipo_de_cliente("Especial")).toEqual(1.5)
+    })
+})
+
+describe("prueba de la funcion de beneficio con condiciones especiales", () => {
+    it ("si la funcion recive Recurrente, 3100, Alimentos deberia retornar 100", () => {
+        expect(obtener_bneficio_con_condiciones_especiales("Recurrente", 3100, "Alimentos")).toEqual(100)
     })
 })
 
