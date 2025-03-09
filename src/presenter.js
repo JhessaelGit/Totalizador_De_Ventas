@@ -2,7 +2,7 @@ import calcular_precio_neto from "./Precio_Neto";
 import {impuesto_correspondiente_al_estado,aplicar_impuesto,impuesto_correspondiente_a_la_categoria} from "./Impuestos_aplicados";
 import { descuento_correspondiente_cantidad, aplicar_descuento, descuento_correspondiente_categoria } from "./Descuentos";
 import { obtener_costo_envio_por_peso_volumetrico } from "./Costo_Extra";
-import { obtener_beneficio_segun_tipo_de_cliente } from "./Tipo_de_cliente_beneficios";
+import { obtener_beneficio_segun_tipo_de_cliente, obtener_bneficio_con_condiciones_especiales } from "./Tipo_de_cliente_beneficios";
 
 
 const cantidad_items = document.querySelector("#cantidad-item");
@@ -68,8 +68,9 @@ formTotalizador.addEventListener("submit", (event) => {
   mostrarTipoDeClienteDiv.innerHTML = "<p>" + `Beneficio de descuento para el costo de envio para el tipo de cliente ${tipo_de_cliente_value} (${porcentaje_descuento_en_costo_envio_por_tipo_de_cliente}%): ${descuento_al_costo_de_envio}` + "</p>";
 
   costo_extra_envio_al_total = (costo_extra_envio_al_total-descuento_al_costo_de_envio).toFixed(2);
-  precio_total=precio_total+impuesto_categoria_agregado_al_total-descuento_categoria_agregado_al_total+costo_extra_envio_al_total;
 
+  precio_total=precio_total+Number(impuesto_categoria_agregado_al_total) - Number(descuento_categoria_agregado_al_total) + Number(costo_extra_envio_al_total);
+  precio_total = precio_total - obtener_bneficio_con_condiciones_especiales(tipo_de_cliente_value,precio_neto,categoria_producto_value)
   mostrarPrecioTotalDiv.innerHTML = "<p>" + "Precio Total (impuesto y descuento): " + precio_total + "</p>";
 
 });
