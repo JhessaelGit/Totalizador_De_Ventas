@@ -30,6 +30,14 @@
       </select>
       <label for="peso-volumetrico">Peso volumetrico</label>
       <input type="number" id="peso-volumetrico">
+      <label for="tipo-de-cliente">Tipo de cliente</label>
+      <select id="tipo-de-cliente">
+        <option value="Normal">Normal</option>
+        <option value="Recurrente">Recurrente</option>
+        <option value="Antiguo recurrente">Antiguo recurrente</option>
+        <option value="Especial">Especial</option>
+       
+      </select>
       <input type="submit" value="Totalizar" id="totalizador-button" />
     </form>
     <div id="mostrar-cantidad-items-div"></div>
@@ -40,6 +48,7 @@
     <div id="mostrar-impuesto-categoria-div"></div>
     <div id="mostrar-descuento-categoria-div"></div>
     <div id="mostrar-peso-volumetrico-y-costo-envio-div"></div>
+    <div id="mostrar-tipo-de-cliente-div"></div>
     <div id="mostrar-precio-total-div"></div>
     <script type="module" src="./src/presenter.js"></script>
   </body>
