@@ -8,6 +8,10 @@ function obtener_beneficio_segun_tipo_de_cliente (tipo_de_cliente)
     {
         return 0.5;
     }
-    return 1;
+    else if (tipo_de_cliente === "Antiguo recurrente")
+    {
+        return 1;
+    }
+    return 1.5;
 }
 export {obtener_beneficio_segun_tipo_de_cliente}

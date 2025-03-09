@@ -12,6 +12,10 @@ describe("prueba de la funcion de obtener beneficio segun el tipo de cliente", (
     it ("si la funcion obtiene el valor Antiguo recurrente debe devolver el dato de 1", () => {
         expect(obtener_beneficio_segun_tipo_de_cliente("Antiguo recurrente")).toEqual(1)
     })
+
+    it ("si la funcion obtiene el valor especial debe devolver el dato de 1.5", () => {
+        expect(obtener_beneficio_segun_tipo_de_cliente("Especial")).toEqual(1.5)
+    })
 })
 
 
