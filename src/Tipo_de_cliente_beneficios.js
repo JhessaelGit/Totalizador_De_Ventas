@@ -1,17 +1,22 @@
 function obtener_beneficio_segun_tipo_de_cliente (tipo_de_cliente)
 {
+    let beneficio_descuento=0
     if (tipo_de_cliente === "Normal")
     {
-        return 0;
+        beneficio_descuento = 0;
     }
     else if (tipo_de_cliente === "Recurrente")
     {
-        return 0.5;
+        beneficio_descuento = 0.5;
     }
     else if (tipo_de_cliente === "Antiguo recurrente")
     {
-        return 1;
+        beneficio_descuento = 1;
     }
-    return 1.5;
+    else if (tipo_de_cliente === "Especial")
+    {    
+        beneficio_descuento = 1.5;
+    }
+    return beneficio_descuento
 }
 export {obtener_beneficio_segun_tipo_de_cliente}
